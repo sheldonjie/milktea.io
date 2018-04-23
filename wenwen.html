@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-size: 14px;
+				font-family: "宋体";
+				background-image: url(img/10.jpg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+			}
+			.heading{
+				width: 980px;
+				height: 100px;
+				text-align: center;
+				line-height: 50px;
+				/*margin: 100px auto;*/
+				position: absolute;
+				left: 200px;
+				top: 80px;
+				color: yellow;
+				font-size: 30px;
+			}
+			h1,.content{
+				color: yellow;
+			}
+			.content{
+				width: 980px;
+				height: 200px;
+				padding: 20px;
+				margin: 0 auto;;
+				position: absolute;
+				left: 1200px;
+				top: 300px;
+				text-align: center;	
+			}
+		</style>
+	</head>
+	<body>
+		<div class="heading">
+			<h1>欢迎来到温温奶茶店</h1>
+		</div>
+		<div class="content">
+		
+		口味：<input type="text" name="search" id="search" style="width: 200px;height: 30px;" /><br /><br />
+		<a href="store.html"><input type="button" id="btn" value="查询" style="width: 70px;height: 30px;background: yellow;"/></a>
+		<input type="button" value="重填" style="width: 70px;height: 30px;background: yellow;"/>
+		</div>
+		<script type="text/javascript">
+		function dom(id){
+			return document.getElementById(id);
+		}
+		dom("btn").onclick = function(){
+			var val = dom("search").value;
+			if (val == "解酒") {
+				window.open("demo.html");
+			}else if(val == "养颜"){
+				window.open("demo1.html");
+			}else{
+				alert("不跳了");
+			}
+		}
+	</script>
+	</body>
+</html>
